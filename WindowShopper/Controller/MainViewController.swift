@@ -10,13 +10,27 @@ import UIKit
 class MainViewController: UIViewController {
 
    
+    @IBOutlet weak var hoursLbl: UILabel!
     @IBOutlet weak var priceTxt: UITextField!
     
+    @IBOutlet weak var clearButton: UIButton!
+    @IBAction func ClearButtonPressed(_ sender: Any) {
+        resultLbl.isHidden = true
+        hoursLbl.isHidden = true
+        wageTxt.text = ""
+        priceTxt.text = ""
+        
+    }
+    
+    @IBOutlet weak var resultLbl: UILabel!
     @IBOutlet weak var wageTxt: CurrencyTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        resultLbl.isHidden = true
+        hoursLbl.isHidden = true
+        clearButton.isHidden = true
         
         //making a UIbutton manually (Calculate button)
         let calcBtn =  UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 60))
@@ -34,7 +48,18 @@ class MainViewController: UIViewController {
     
     
     @objc func calculate(){
-        print("We got here")
+        if let wageTxt = wageTxt.text, let priceTxt = priceTxt.text{
+            // first if is to make sure the fields aren't empty
+            if let wage  = Double(wageTxt), let price = Double(priceTxt){
+                //checking if the string can be conveted to a Double
+                view.endEditing(true) //stopping further keyboard editing
+                resultLbl.isHidden = false
+                hoursLbl.isHidden = false
+                clearButton.isHidden = false
+                resultLbl.text = "\(Wage.getHours(forWage: wage, andPrice: price))"
+            }
+        }
+        
     }
 
 

@@ -37,6 +37,27 @@
                                 <nil key="textColor"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFb-Dn-vKn">
+                                <rect key="frame" x="30" y="308" width="315" height="62"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeN-1i-KHP">
+                                <rect key="frame" x="166" y="386" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHs-1b-zVE">
+                                <rect key="frame" x="30" y="602" width="315" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear calculator"/>
+                                <connections>
+                                    <action selector="ClearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G51-oC-vsF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -44,21 +65,32 @@
                             <constraint firstItem="WBX-rL-ByM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="1N1-Xa-60m"/>
                             <constraint firstItem="UkO-3T-uFh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4CT-OD-vyy"/>
                             <constraint firstItem="akf-es-EQM" firstAttribute="top" secondItem="WBX-rL-ByM" secondAttribute="bottom" constant="25" id="5MU-kM-h7p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WHs-1b-zVE" secondAttribute="bottom" constant="30" id="6Yl-8D-dE6"/>
                             <constraint firstItem="akf-es-EQM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="EMO-vt-Cbx"/>
+                            <constraint firstItem="xFb-Dn-vKn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="M3E-6I-Gn6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="akf-es-EQM" secondAttribute="trailing" constant="30" id="Olq-9Q-Ork"/>
                             <constraint firstItem="UkO-3T-uFh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PzC-ur-0HU"/>
                             <constraint firstItem="UkO-3T-uFh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QhI-7i-aSe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xFb-Dn-vKn" secondAttribute="trailing" constant="30" id="XTD-lc-pFL"/>
                             <constraint firstItem="akf-es-EQM" firstAttribute="height" secondItem="WBX-rL-ByM" secondAttribute="height" id="a5t-l3-aur"/>
                             <constraint firstItem="WBX-rL-ByM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ehP-Gj-qOk"/>
+                            <constraint firstItem="WHs-1b-zVE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ggx-Nx-T3v"/>
                             <constraint firstItem="9rT-NN-g1F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jzV-f6-Ix4"/>
                             <constraint firstItem="9rT-NN-g1F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="liJ-7H-Z2E"/>
+                            <constraint firstItem="WHs-1b-zVE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="q1R-jd-DW1"/>
+                            <constraint firstItem="xFb-Dn-vKn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r32-jr-BwS"/>
+                            <constraint firstItem="xFb-Dn-vKn" firstAttribute="top" secondItem="akf-es-EQM" secondAttribute="bottom" constant="50" id="sIp-tC-dmJ"/>
                             <constraint firstItem="WBX-rL-ByM" firstAttribute="top" secondItem="9rT-NN-g1F" secondAttribute="bottom" constant="35" id="tUm-dU-esM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WHs-1b-zVE" secondAttribute="trailing" constant="30" id="vJM-Ii-uqn"/>
                             <constraint firstItem="UkO-3T-uFh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="veD-Nx-Edh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WBX-rL-ByM" secondAttribute="trailing" constant="30" id="vuC-bA-sgl"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clearButton" destination="WHs-1b-zVE" id="TRf-Kb-ZcB"/>
+                        <outlet property="hoursLbl" destination="oeN-1i-KHP" id="Luc-Eq-5fN"/>
                         <outlet property="priceTxt" destination="akf-es-EQM" id="tqG-bX-uHR"/>
+                        <outlet property="resultLbl" destination="xFb-Dn-vKn" id="xIg-fo-shi"/>
                         <outlet property="wageTxt" destination="WBX-rL-ByM" id="S0v-dM-VAQ"/>
                     </connections>
                 </viewController>
